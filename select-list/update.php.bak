@@ -1,0 +1,22 @@
+﻿
+<script>
+window.onload=function()
+{
+	setInterval('abc("a.html")',2000);
+}
+function abc(p1)
+{
+	var x = XMLHttpRequest();
+	x.open("POST",p1);
+	x.onreadystatechange=function()
+	{
+		var content=document.getElementById("abc");
+		content.innerHTML=x.responseText;
+	}
+	x.sent(null);
+}
+</script>
+<body>
+ <h1 style="background-color:blue;text-align:center">ทดลอง AJAX</h1>
+ <div id="abc" onclick="abc('show.php')"></div>
+</body>

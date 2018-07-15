@@ -1,0 +1,12 @@
+﻿<?php
+		 $_SESSION["intLine"] = 0;
+		 $_SESSION["strProductID"][0] = "abc";
+
+
+	
+	$key = array_search("ttt", $_SESSION["strProductID"]);
+	echo $key;
+	/*if((string)$key != "")
+	{
+		 $_SESSION["strQty"][$key] = $_SESSION["strQty"][$key] + $_POST["txtQty"];
+	}*/
